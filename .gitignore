@@ -1,4 +1,6 @@
 .env
-*.log
+log*
 .DS_Store
-.sql
+*.sql
+vendor
+composer.lock
