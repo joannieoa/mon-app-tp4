@@ -20,27 +20,27 @@ https://mon-app-tp4.e2495411.webdevmaisonneuve.ca/
 - pas de .env sur GitHub (sécurité)
 
 ## 6. Base de données
-Nom de la base : produits_app
-Nom de la table : produits → Elle contient les produits ajouté.
+- Nom de la base : produits_app
+- Nom de la table : produits → Elle contient les produits ajouté.
 
 ## 7. Variables d’environnement
 Les variables se trouve dans le fichier .env qui n'est pas exposer sur le dépôt GitHub, car ce sont des informations sensibles.
 On a le fichier .en.example qui nous montre ce qui devrait être écrit dans le fichier .env.
 
 ## 8. Configuration du sous-domaine N0C
-Sous-domaine : mon-app-tp4.e2495411.webdevmaisonneuve.ca
-Root du document : mon-application/public
+- Sous-domaine : mon-app-tp4.e2495411.webdevmaisonneuve.ca
+- Root du document : mon-application/public
 
 ## 9. Étapes de déploiement
 
 ### 9.1 Préparation locale dans WSL
-J'ai placé mon projet dans /var/www/mon-application. 
-Création de mon fichier .gitignore.
-Configuration du fichier .env, .env.example.
+- J'ai placé mon projet dans /var/www/mon-application. 
+- Création de mon fichier .gitignore.
+- Configuration du fichier .env, .env.example.
 
 ### 9.2 Mise sur GitHub
-Initalisation du dépôt Git.
-Je m'assure que mon fichier .env et bel et bien ignoré, je commit mon projet et je git push origin main.
+- Initalisation du dépôt Git.
+- Je m'assure que mon fichier .env et bel et bien ignoré, je commit mon projet et je git push origin main.
 
 ### 9.3 Préparation de la base sur N0C
 - Création de la base dans N0C
@@ -49,24 +49,24 @@ Je m'assure que mon fichier .env et bel et bien ignoré, je commit mon projet et
 - Vérification des tables
 
 ### 9.4 Connexion SSH
-Commande utilisées : ssh khycbjjetn@209.16.158.158 -p 5022
-Ensuite :
-whoami
-pwd
-git --version
+Commande utilisées : ssh khycbjjetn@209.16.158.158 -p 5022 . J'utilise ensuite des commandes pour vérifier que je suis au bon endroit.
+- whoami
+- pwd
+- git --version
 
 ### 9.5 Récupération du projet sur N0C
 - Je m'assure d'être dans /home/khycbjjetn/
 - Je clone avec la commande : git clone https://github.com/joannieoa/mon-app-tp4.git mon-application
 
 ### 9.6 Configuration du .env sur N0C
-Je fais la création du fichier .env dans /home/khycbjjetn/mon-application/.env avec la commande nano .env. J'ajoute mes variables MySQL provenant de N0C.
-Il faut s'assurer qu'on ne met pas les informations qu'on a mis sur le fichier .env local, mais de mettre les variables MySQL de N0C.
-Ce fichier n'est jaamis exposer grâce à .gitignore.
+- Je fais la création du fichier .env dans /home/khycbjjetn/mon-application/.env avec la commande nano .env. J'ajoute mes variables MySQL provenant de N0C.
+- Il faut s'assurer qu'on ne met pas les informations qu'on a mis sur le fichier .env local, mais de mettre les variables MySQL de N0C.
+- Ce fichier n'est jamais exposer grâce à .gitignore.
 
 ### 9.7 Configuration du sous-domaine
-Je m'assure que le document root de mon lien N0C pointe vers le bon nom et qu'il ait le public d'inscrit.
-/mon-application/public
+Je m'assure que le document root de mon lien N0C pointe vers le bon nom et qu'il ait le public d'inscrit :
+
+- /mon-application/public
 
 ### 9.8 Tests finaux
 J’ai mis mon lien N0C sur le navigateur et sma page affiche correctement. Elle fait les action CRUD sans problème et elle connecte bien avec la base de données.
