@@ -1,4 +1,4 @@
-#TP4 Déploiement d'une application PHP/MySQL sur N0C
+# TP4 Déploiement d'une application PHP/MySQL sur N0C
 
 ## 1. Nom du projet
 Application d'ajout de produits dans une liste.
@@ -13,11 +13,11 @@ https://github.com/joannieoa/mon-app-tp4
 https://mon-app-tp4.e2495411.webdevmaisonneuve.ca/
 
 ## 5. Structure du projet
--app/ → contient le db.php
--public/ → contient index.php, style.css, supprimer.php
--.env.example → modèle de configuration
--.gitignore → empêche .env d’être envoyé sur GitHub
--pas de .env sur GitHub (sécurité)
+- app/ → contient le db.php
+- public/ → contient index.php, style.css, supprimer.php
+- .env.example → modèle de configuration
+- .gitignore → empêche .env d’être envoyé sur GitHub
+- pas de .env sur GitHub (sécurité)
 
 ## 6. Base de données
 Nom de la base : produits_app
@@ -43,10 +43,10 @@ Initalisation du dépôt Git.
 Je m'assure que mon fichier .env et bel et bien ignoré, je commit mon projet et je git push origin main.
 
 ### 9.3 Préparation de la base sur N0C
--Création de la base dans N0C
--Création de l’utilisateur MySQL
--Import du .sql dans phpMyAdmin
--Vérification des tables
+- Création de la base dans N0C
+- Création de l’utilisateur MySQL
+- Import du .sql dans phpMyAdmin
+- Vérification des tables
 
 ### 9.4 Connexion SSH
 Commande utilisées : ssh khycbjjetn@209.16.158.158 -p 5022
@@ -56,8 +56,8 @@ pwd
 git --version
 
 ### 9.5 Récupération du projet sur N0C
--Je m'assure d'être dans /home/khycbjjetn/
--Je clone avec la commande : git clone https://github.com/joannieoa/mon-app-tp4.git mon-application
+- Je m'assure d'être dans /home/khycbjjetn/
+- Je clone avec la commande : git clone https://github.com/joannieoa/mon-app-tp4.git mon-application
 
 ### 9.6 Configuration du .env sur N0C
 Je fais la création du fichier .env dans /home/khycbjjetn/mon-application/.env avec la commande nano .env. J'ajoute mes variables MySQL provenant de N0C.
@@ -72,9 +72,9 @@ Je m'assure que le document root de mon lien N0C pointe vers le bon nom et qu'il
 J’ai mis mon lien N0C sur le navigateur et sma page affiche correctement. Elle fait les action CRUD sans problème et elle connecte bien avec la base de données.
 
 ## 10. Problèmes rencontrés
--J’ai rencontré beaucoup de problème, par exemple j’ai eu l’erreur 404 sur mon navigateur. Je
+- J’ai rencontré beaucoup de problème, par exemple j’ai eu l’erreur 404 sur mon navigateur. Je
 les régler en changeant le nom de mon document root pour qu’il pointe vraiment vers monapplication/public.
--Ensuite, lors de l’importation de mon fichier SQL dans phpMyAdmin j’avais une erreur dans
+- Ensuite, lors de l’importation de mon fichier SQL dans phpMyAdmin j’avais une erreur dans
 mon fichier, donc sa ne voulait pas l’accepter et finalement c’était une erreur sur une ligne
 par COLLATE=utf8mb4_unicode_ci
 
