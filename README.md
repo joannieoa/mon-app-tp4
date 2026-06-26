@@ -76,7 +76,7 @@ J’ai mis mon lien N0C sur le navigateur et sma page affiche correctement. Elle
 les régler en changeant le nom de mon document root pour qu’il pointe vraiment vers monapplication/public.
 - Ensuite, lors de l’importation de mon fichier SQL dans phpMyAdmin j’avais une erreur dans
 mon fichier, donc sa ne voulait pas l’accepter et finalement c’était une erreur sur une ligne
-par COLLATE=utf8mb4_unicode_ci
+que je devais remplacer par COLLATE=utf8mb4_unicode_ci.
 
 ## 11. Validation finale
-Après le déploiement, j’ai vérifié que l’application fonctionne correctement sur N0C. Le sous‑domaine pointe bien vers le dossier public/ et le site s’affiche sans erreur. La connexion à la base de données a été testée en effectuant les opérations CRUD, qui fonctionnent toutes normalement. J’ai aussi confirmé que les fichiers sensibles comme .env ne sont pas accessibles publiquement. L’application en ligne correspond à la version locale et respecte toutes les exigences du TP.
+Après le déploiement, j’ai vérifié que l’application fonctionne correctement sur N0C. Le sous‑domaine pointe bien vers le dossier public/ et le site s’affiche sans erreur. La connexion à la base de données a été testée en effectuant les opérations CRUD, qui fonctionnent toutes normalement. J’ai aussi confirmé que les fichiers sensibles comme .env ne soit pas accessibles publiquement. L’application en ligne correspond à la version locale et respecte toutes les exigences du TP.
