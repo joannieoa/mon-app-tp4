@@ -1,8 +1,5 @@
 # TP4 Déploiement d'une application PHP/MySQL sur N0C
 
-## Lien pour mes images
-file:///C:/Users/Joannie%20Ortega%20Alva/Documents/Session2/Environnement%20dev%20web%202/TP4/TP4%20_DEPLOIEMENT_N0C_%20IMAGES.pdf
-
 ## 1. Nom du projet
 Application d'ajout de produits dans une liste.
 
@@ -60,9 +57,9 @@ Elle contient une table :
 
 ### 9.4 Connexion SSH
 Commande utilisées : `ssh khycbjjetn@209.16.158.158 -p 5022` . J'utilise ensuite des commandes pour vérifier que je suis au bon endroit.
-- whoami
-- pwd
-- git --version
+- `whoami`
+- `pwd`
+- `git --version`
 
 ### 9.5 Récupération du projet sur N0C
 - Je m'assure d'être dans `/home/khycbjjetn/`
@@ -82,11 +79,17 @@ Je m'assure que le document root de mon lien N0C pointe vers le bon sous-dossier
 J’ai mis mon lien N0C sur le navigateur et ma page affiche correctement. Elle fait les action CRUD sans problème et elle connecte bien avec la base de données.
 
 ## 10. Problèmes rencontrés
-- J’ai rencontré beaucoup de problème, par exemple j’ai eu l’erreur 404 sur mon navigateur. Je
-les régler en changeant le nom de mon document root pour qu’il pointe vraiment vers monapplication/public.
-- Ensuite, lors de l’importation de mon fichier SQL dans phpMyAdmin j’avais une erreur dans
-mon fichier, donc sa ne voulait pas l’accepter et finalement c’était une erreur sur une ligne
-que je devais remplacer par COLLATE=utf8mb4_unicode_ci.
+- J’ai rencontré beaucoup de problème, par exemple j’ai eu l’erreur 404 sur mon navigateur. Je les régler en changeant le nom de mon document root pour qu’il pointe vraiment vers `mon-application/public`.
+- Ensuite, lors de l’importation de mon fichier SQL dans `phpMyAdmin` j’avais une erreur dans mon fichier, donc sa ne voulait pas l’accepter et finalement c’était une erreur sur une ligne que je devais remplacer par `COLLATE=utf8mb4_unicode_ci`.
 
 ## 11. Validation finale
-Après le déploiement, j’ai vérifié que l’application fonctionne correctement sur N0C. Le sous‑domaine pointe bien vers le dossier public/ et le site s’affiche sans erreur. La connexion à la base de données a été testée en effectuant les opérations CRUD, qui fonctionnent toutes normalement. J’ai aussi confirmé que les fichiers sensibles comme .env ne soit pas accessibles publiquement. L’application en ligne correspond à la version locale et respecte toutes les exigences du TP.
+Après le déploiement, j’ai vérifié que l’application fonctionne correctement sur N0C. Le sous‑domaine pointe bien vers le dossier `public/` et le site s’affiche sans erreur. La connexion à la base de données a été testée en effectuant les `opérations CRUD`, qui fonctionnent toutes normalement. J’ai aussi confirmé que les fichiers sensibles comme `.env` ne soit pas accessibles publiquement. L’application en ligne correspond à la version locale et respecte toutes les exigences du TP.
+
+## 12. Screenshot
+![Connexion SSH](img/connexionSSH.png)
+![PHPMyAdmin ](img/phpmyadmin.png)
+![Validation N0C - Page 1](img/ValidationN0C.png)
+![Validation N0C - Page 2](img/ValidationN0C2.png)
+![Sous-domaines N0C](img/sous-domaines.png)
+
+
